@@ -1,0 +1,76 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 940px;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.col-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.card-data img{
+  max-width: 100%;
+  height: 100%;
+}
+
+
+
+
+.tarot-cards .tarot-card{
+    margin-bottom: 30px;
+}
+.tarot-card-inner{
+    height: 345px;
+    padding: 0px 42px
+}
+.tarot-cards .card-data{
+    position: relative;
+    width: 100%;
+    height: 100%;    
+    box-shadow: 3px 3px 17px -7px #000;
+    border-radius: 13px;
+
+    transition: all 0.8s ease-in-out;
+    transform-style: preserve-3d;
+}
+.tarot-cards .tarot-front, .tarot-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.tarot-cards .card-data img{
+    height: 100%;
+}
+.tarot-cards.flip .tarot-card:hover .card-data {
+    transform: rotateY(180deg);
+}
+.tarot-cards.flip .tarot-card .tarot-back{
+    transform: rotateY(180deg);  
+}
+.tarot-cards.fade .tarot-card .tarot-back{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+    transition: all 0.5s ease-out;
+
+}
+.tarot-cards.fade .tarot-card:hover .card-data .tarot-back{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.01);
+}
